@@ -1,0 +1,16 @@
+gems:
+  - jekyll-sitemap
+
+
+# Site settings
+title: Skveege planlægger og fakturerer for vinduespudsere
+email: info@skveege.com
+description: Farvel Papir; Goddag overblik! Skveege er et administrationssystem for vinduespudsere. Det håndterer planlægning af ruter, fakturering af kunder, registrering af betalinger m.m.
+
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://skveege.com" # the base hostname & protocol for your site
+twitter_username: michaelkrog
+github_username:  michaelkrog
+
+# Build settings
+markdown: kramdown

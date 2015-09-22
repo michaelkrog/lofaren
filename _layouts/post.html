@@ -1,0 +1,53 @@
+---
+layout: default
+bodyId: blogpost
+navbarType: hero dark
+---
+{% assign author = site.data.people[page.author] %}
+<div id="blogpost-wrapper">
+    <div itemscope itemtype="http://schema.org/Article" class="container">
+        {% if page.teaserImage %}
+        <div class="row">
+            <div class="col-md-12">
+                <div class="main-pic">
+                    <img itemprop="image" src="{{ page.teaserImage | prepend: site.baseurl }}" class="img-responsive" alt="Teaser Image" style="max-height:350px"/>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        <div class="row">
+            <div class="col-md-10 post">
+                <div itemprop="headline name" class="title">
+                    {{ page.title }}
+                </div>
+                <div class="author">
+                    <img src="/images/testimonials/{{page.author}}.jpg" class="avatar" alt="author" />
+                    <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                        <a href="{{author.gPlusUrl}}" itemprop="url">
+                            <span itemprop="name">{{author.name}}</span>
+                        </a>
+                    </span>,
+                    <span itemprop="datePublished" content="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%b %-d, %Y" }}</span>
+                </div>
+                <div class="content">
+                    <span itemprop="articleBody">{{ content }}</span>
+                </div>
+                <!--div class="share">
+                    <img src="/images/share.png" alt="share" />
+                </div-->
+                <div class="other-posts">
+                    {% if page.previous %}
+                    <a href="{{page.previous.url}}" class="prev">
+                        ← {{page.previous.title}}
+                    </a>
+                    {% endif %}
+                    {% if page.next %}
+                    <a href="{{page.next.url}}" class="next pull-right">
+                        {{page.next.title}} →
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

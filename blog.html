@@ -1,0 +1,97 @@
+---
+layout: default
+bodyId: blog
+navbarType: hero dark
+title: Skveege Blog
+description: Den officielle blog for Skveege
+---
+<div id="blog-wrapper">
+    <div class="container">
+        <div class="col-md-9">
+            {% for post in site.posts %}
+            {% assign author = site.data.people[post.author] %}
+            <div itemscope itemtype="http://schema.org/Article" class="post">
+                {% if post.teaserImage %}
+                <a href="{{ post.url | prepend: site.baseurl }}" class="pic">
+                    <img itemprop="image" src="{{ post.teaserImage | prepend: site.baseurl }}" class="img-responsive" alt="Teaser Image" />
+                </a>
+                {% endif %}
+                <div itemprop="headline name" class="title">
+                    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                </div>
+                <div class="author">
+                    <img src="images/testimonials/{{post.author}}.jpg" class="avatar" alt="author" />
+                    <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                        <a href="{{author.gPlusUrl}}" itemprop="url">
+                            <span itemprop="name">{{author.name}}</span>
+                        </a>
+                    </span>,
+                    <span itemprop="datePublished" content="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%b %-d, %Y" }}</span>
+                </div>
+                <p class="intro">
+                    <span itemprop="description">{{post.excerpt}}</span>
+                </p>
+                <a href="{{ post.url | prepend: site.baseurl }}" class="continue-reading">Læs mere</a>
+            </div>
+            {% endfor %}
+
+
+
+            {% if paginator.previous_page ||  paginator.next_page  %}
+            <div class="pages">
+                <ul class="pagination">
+                    {% if paginator.previous_page %}
+                    <li><a href="{{ paginator.previous_page_path }}" class="previous">&laquo;</a></li>
+                    {% else %}
+                    <li><span class="previous">Previous</span></li>
+                    {% endif %}
+
+                    {% for page in (1..paginator.total_pages) %}
+                    {% if page == paginator.page %}
+                    <li><span{{ page }}</span></li>
+                    {% elsif page == 1 %}
+                    <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></li>
+                    {% else %}
+                    <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
+                    {% endif %}
+                    {% endfor %}
+
+                    {% if paginator.next_page %}
+                    <li><a href="{{ paginator.next_page_path }}" class="next">&raquo;</a></li>
+                    {% else %}
+                    <li><span class="next ">&raquo;</span></li>
+                    {% endif %}
+                </ul>
+            </div>
+            {% endif %}
+        </div>
+        <div class="col-md-3 sidebar">
+            <!--div class="search">
+                <form>
+                    <span class="icomoon-search"></span>
+                    <input type="text" name="q" placeholder="Search on blog..." />
+                </form>
+            </div-->
+            <div class="updates">
+                <strong>
+                    Følg vores blog
+                    <i class="fa fa-rss"></i>
+                </strong>
+                <p>
+                    Modtag vores blogindlæg automatisk ved at abonnere på<a href="/feed.xml"> vores RSS feed</a>.
+                </p>
+            </div>
+            <!--div class="follow-tw">
+                <a href="/feed.xml">RSS feed</a>
+            </div-->
+            <!--div class="best-hits">
+                <strong>Check out our best hits:</strong>
+                <a href="#">How to start a business</a>
+                <a href="#">How to sell online</a>
+                <a href="#">Climate change when needed</a>
+                <a href="#">Web development upstart</a>
+                <a href="#">Learn Rails in 30 days</a>
+            </div-->
+        </div>
+    </div>
+</div>

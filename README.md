@@ -1,2 +1,1 @@
-# lofaren
-Website for Lofaren
+Promo site for Skveege.

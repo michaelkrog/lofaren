@@ -1,0 +1,38 @@
+<header class="navbar navbar-inverse {{page.navbarType}}" role="banner">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/index.html" class="navbar-brand" style="padding-top:6px"><img src="/images/logo.png" alt="Logo" width="32" height="32"></a>
+            <a href="/index.html" class="navbar-brand">Skveege</a>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/index.html" alt="Skveege's forside – Vi hjælper vinduespudsere">
+                        Forsiden
+                    </a>
+                </li>
+                <li>
+                    <a href="http://docs.skveege.com"  alt="Brugervejledning til Skveege">
+                        Hjælp
+                    </a>
+                </li>
+                <li>
+                    <a href="http://tech.skveege.com"  alt="Teknisk dokumentation af Skveege">
+                        API
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ '/blog.html' | prepend: site.baseurl }}" alt="Skveege's officielle blog">
+                        Blog
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+    </div>
+</header>

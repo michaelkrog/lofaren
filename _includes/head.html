@@ -1,0 +1,44 @@
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+	<meta name="author" content="Skveege">
+    <meta name="google-site-verification" content="8WwT_xS9ZJxxuajmjIQpLWfmLv4Zuh11OaDuaymofTY" />
+
+	<link rel="publisher" href="https://plus.google.com/+SkveegeApp">
+	{% if page.author %}
+	{% assign author = site.data.people[page.author] %}
+	<link rel="publisher" href="{{author.gPlusUrl}}">
+	{% endif %}
+	<!-- stylesheets -->
+	<link rel="stylesheet" type="text/css" href="/css/theme.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendor/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/vendor/icomoon.css">
+
+	<!-- javascript -->
+	<script type="application/ld+json">
+	[{
+		"@context" : "http://schema.org",
+		"@type" : "WebSite",
+		"name" : "Skveege",
+		"alternateName" : "Skveege Website",
+		"url" : "http://skveege.com"
+	  },
+	  {
+	    "@context" : "http://schema.org",
+	    "@type" : "Organization",
+	    "name" : "Skveege",
+	    "url" : "http://skveege.com",
+	    "sameAs" : [
+	  		"https://www.facebook.com/skveege",
+	  		"https://plus.google.com/+SkveegeApp"
+	    ],
+        "logo": "http://skveege.com/images/logo_standard.png"
+	  }]
+	</script>
+
+
+
+</head>
