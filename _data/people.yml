@@ -1,7 +1,7 @@
-bjarne:
-    name: Bjarne Jensen
+  - name: Bjarne Jensen
     phone: 40 13 86 68
+    title: Direktør
 
-Anette:
-    name: Anette Jensen
+  - name: Anette Jensen
     phone: 23 27 98 20
+    title: Salg

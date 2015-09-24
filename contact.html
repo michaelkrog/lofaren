@@ -1,0 +1,47 @@
+---
+layout: default
+navbarType: hero dark
+bodyId: contact-us
+title: LoFaRen kontaktinformation
+description: Kontaktoplysninger for LoFaRen's medarbejdere.
+---
+
+<div id="info">
+		<div class="container">
+			<div id="features" class="row">
+				<div id="second-option" class="col-md-8 message">
+					<h3>Medarbejdere</h3>
+					{% for worker in site.data.people %}
+					<div class="feature">
+					<strong>{{worker.name}}, {{worker.title}}</strong>
+					<p>Telefon: {{worker.phone}}</p>
+					</div>            		
+					{% endfor %}
+				</div>
+				<div class="col-md-4 contact">
+					<div class="address">
+						<h3>Vores adresse</h3>
+						<p>
+							Lo-Fa-Rèn <br>
+							Nakskov landevej 44 <br>
+							4930 Maribo
+						</p>
+					</div>
+					<div class="phone">
+						<h3>Telefon</h3>
+						<p>
+							54 60 85 58
+						</p>
+					</div>
+					<div class="phone">
+						<h3>Email</h3>
+						<p>
+							lofaren@lofaren.dk
+
+						</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
