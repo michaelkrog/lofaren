@@ -7,12 +7,12 @@
                 <span class="icon-bar"></span>
             </button>
             <!--a href="/index.html" class="navbar-brand" style="padding-top:6px"><img src="/images/logo.png" alt="Logo" width="32" height="32"></a-->
-            <a href="/index.html" class="navbar-brand">LoFaRen</a>
+            <a href="/index.html" class="navbar-brand">Lo-Fa-Ren</a>
         </div>
         <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="/index.html" alt="LoFaRen's forside">
+                    <a href="/index.html" alt="Lo-Fa-Ren's forside">
                         Forsiden
                     </a>
                 </li>
