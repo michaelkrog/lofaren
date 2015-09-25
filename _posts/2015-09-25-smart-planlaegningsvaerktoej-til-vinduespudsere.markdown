@@ -4,7 +4,7 @@ title:  "Smart planlægningsværktøj til vinduespudsere!"
 description: "Mange vinduespudsere har udfordringer med at optimere deres planlægning. Skveege er en løsning på problemet."
 date:   2015-09-25 10:00:00
 categories: tools
-author: hannah
+author: bjarne
 ---
 Vores erfaring med vinduespolering har vist at det kan være svært at planlægge arbejdet for vinduespudsere optimalt; 
 Det tager tid og som tiden går bliver ruterne mindre optimale i forhold til kørselsafstande. Der er med tiden kommet 
