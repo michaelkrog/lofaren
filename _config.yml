@@ -8,7 +8,7 @@ email: lofaren@lofaren.dk
 description: 
 
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://lofaren.dk" # the base hostname & protocol for your site
+url: "http://www.lofaren.dk" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
